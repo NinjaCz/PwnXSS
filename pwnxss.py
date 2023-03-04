@@ -46,7 +46,7 @@ def start():
 	pos_opt.add_argument("--cookie",help="Set cookie (e.g {'ID':'1094200543'})",default='''{"ID":"1094200543"}''',metavar="")
 	
 	getopt=parse.parse_args()
-	print(logo)
+	print(logo.encode("utf-8"))
 	Log.info("Starting PwnXSS...")
 	if getopt.u:
 		core.main(getopt.u,getopt.proxy,getopt.user_agent,check(getopt),getopt.cookie,getopt.method)
